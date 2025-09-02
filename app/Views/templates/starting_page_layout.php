@@ -65,7 +65,7 @@ $session = \Config\Services::session();
       <div class="container-fluid">
          <div class="navbar-wrapper row w-100">
             <div class="col-6">
-               <p class="navbar-brand"><b><?= $title.' | TAHUN AJARAN '.$session->get('thajar') ?? 'Login'; ?> </b></p>
+               <p class="navbar-brand"><b><?= !empty($session->get('thajar')) ? 'ABSENSI SISWA MAN 2 KOTA BATAM - TA. '.$session->get('thajar') : 'Login';?> </b></p>
             </div>
             <div class="col-6 d-flex justify-content-end">
                <?= $this->renderSection('navaction') ?>
