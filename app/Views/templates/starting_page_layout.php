@@ -16,8 +16,9 @@ $session = \Config\Services::session();
    <title>Absensi QR Code</title>
    <style>
       .bg {
-         background: url(<?= base_url('public/assets/img/bg2.jpg'); ?>) center;
-         opacity: 0.1;
+         /* background: url(<?= base_url('public/assets/img/bg2.jpg'); ?>) center; */
+         /* background:#1572e8!important; */
+         /* opacity: 0.1; */
          background-size: cover;
          height: 100vh;
          width: 100%;

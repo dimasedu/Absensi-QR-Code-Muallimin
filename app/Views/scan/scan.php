@@ -37,8 +37,10 @@
            
              <div class="col-lg-3 col-xl-4">
                 <div class="card">
+                   <div class="card-header">
+                     <h4 class="card-title"><b>Tips</b></h4>
+                   </div>
                    <div class="card-body">
-                      <h3 class="mt-2"><b>Tips</b></h3>
                       <ul class="pl-3">
                          <li>Tunjukkan qr code sampai terlihat jelas di kamera</li>
                          <li>Posisikan qr code tidak terlalu jauh maupun terlalu dekat</li>
@@ -48,7 +50,7 @@
              </div>
              <div class="col-lg-6 col-xl-4">
                 <div class="card">
-                   <div class="col-10 mx-auto card-header card-header-primary">
+                   <div class="col-12 mx-auto card-header card-header-primary">
                       <div class="row">
                          <div class="col">
                             <h4 class="card-title"><b>Absen <?= $waktu; ?></b></h4>
@@ -61,8 +63,8 @@
                          </div>
                       </div>
                    </div>
-                   <div class="card-body my-auto px-5">
-                      <h4 class="d-inline">Pilih kamera</h4>
+                   <div class="card-body">
+                      <label class="d-inline">Pilih kamera</label>
 
                       <select id="pilihKamera" class="custom-select w-50 ml-2" aria-label="Default select example" style="height: 35px;">
                          <option selected>Select camera devices</option>
@@ -92,8 +94,10 @@
              </div>
              <div class="col-lg-3 col-xl-4">
                 <div class="card">
+                   <div class="card-header">
+                     <h4 class="card-title"><b>Penggunaan</b></h4>
+                   </div>
                    <div class="card-body">
-                      <h3 class="mt-2"><b>Penggunaan</b></h3>
                       <ul class="pl-3">
                          <li>Jika berhasil scan maka akan muncul data siswa/guru dibawah preview kamera</li>
                          <li>Klik tombol <b><span class="text-success">Absen masuk</span> / <span class="text-warning">Absen pulang</span></b> untuk mengubah waktu absensi</li>

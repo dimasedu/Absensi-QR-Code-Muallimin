@@ -11,13 +11,16 @@
 use App\Libraries\Siswalib;
 $siswalib = new Siswalib();
 ?>
-<div class="main-panel">
+
+<style>
+body {background:#1572e8!important;}
+.navbar .navbar-brand {color: #fff;}
+</style>
+<div class="main-panel" id="login-page">
    <div class="content">
       <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-8 m-auto">
                <div class="card">
-                  <div class="card-header card-header-primary mb-48">
+                  <div class="card-header px-3">
                      <h4 class="card-title">Form Permohonan Izin/Sakit</h4>
                      <p class="card-category">Silahkan masukkan detail permohonan pada form yang tersedia.</p>
                   </div>
@@ -114,8 +117,6 @@ $siswalib = new Siswalib();
                   </div>
                </div>
             </div>
-         </div>
-      </div>
    </div>
 </div>
 
