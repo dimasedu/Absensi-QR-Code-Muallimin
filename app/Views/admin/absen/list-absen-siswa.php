@@ -1,37 +1,41 @@
-<div class="card-body">
-    <div class="row">
-        <div class="col-auto me-auto">
-            <div class="pt-3 pl-3">
-                <h4><b>Absen Siswa</b></h4>
-                <p>Daftar siswa muncul disini</p>
+
+    <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+
+        <div>
+            <div class="">
+                <h4 class="card-title"><b>Absen Siswa</b></h4>
+                <p class="mb-0">Daftar siswa muncul disini</p>
             </div>
         </div>
-        <div class="col">
-            <a href="#" class="btn btn-primary pl-3 mr-3 mt-3" onclick="kelas = onDateChange()" data-toggle="tab">
+        <div>
+            <a href="#" class="btn btn-primary ml-3 mt-3 mt-md-0" onclick="kelas = onDateChange()" data-toggle="tab">
                 <i class="material-icons mr-2">refresh</i> Refresh
             </a>
 
-            <a href="#" class="btn btn-success pl-3 mr-3 mt-3" data-bs-toggle="modal" data-bs-target="#harianModal">
+            <a href="#" class="btn btn-success ml-3 mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#harianModal">
                 <i class="material-icons mr-2">fact_check</i> LAPORAN HARIAN
             </a>
 
-            <a href="#" class="btn btn-danger pl-3 mr-3 mt-3" data-bs-toggle="modal" data-bs-target="#ijinModal">
+            <a href="#" class="btn btn-danger ml-3 mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#ijinModal">
                 <i class="material-icons mr-2">medical_information</i> LAPORAN IJIN/SAKIT
             </a>
 
-            <a href="#" class="btn btn-info pl-3 mr-3 mt-3" data-bs-toggle="modal" data-bs-target="#bulananModal">
+            <a href="#" class="btn btn-info ml-3 mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#bulananModal">
                 <i class="material-icons mr-2">print</i> LAPORAN BULANAN
             </a>
         </div>
-        <div class="col-auto">
+        <!-- <div class="col-auto">
             <div class="px-4">
                 <h3 class="text-end">
                     <b class="text-primary"><?= $kelas; ?></b>
                 </h3>
             </div>
-        </div>
+        </div> -->
     </div>
-
+    <div class="card-body">
+    <h3 class="text-left mt-0">
+        <b class="text-primary"><?= $kelas; ?></b>
+    </h3>
     <div id="dataSiswa" class="card-body table-responsive pb-5">
         <?php if (!empty($data)) : ?>
             <table class="table table-hover">
@@ -90,7 +94,8 @@
         <?php
         endif; ?>
     </div>
-</div>
+    </div>
+
 
 <!---laporan harian--->
 <form 

@@ -20,13 +20,17 @@ $siswalib = new Siswalib();
             <div class="card">
                <div class="card-header card-header-tabs card-header-success">
                   <div class="nav-tabs-navigation">
-                     <div class="row">
+                     <div class="row align-items-center">
                         <div class="col">
                            <h4 class="card-title"><b>Daftar Izin/Sakit</b></h4>
                            <p class="card-category">Daftar siswa melakukan izin / masuk.</p>
                         </div>
                         <div class="col-auto">
-                           <div class="nav-tabs-wrapper">
+                           <a class="btn btn-primary" id="tabBtn"  href="<?= site_url('admin/absensi-izin/add'); ?>">
+                              <i class="material-icons">add</i> Data Baru
+                              <div class="ripple-container"></div>
+                           </a>
+                           <!-- <div class="nav-tabs-wrapper">
                               <ul class="nav nav-tabs" data-tabs="tabs">
                                  <li class="nav-item">
                                     <a class="nav-link" id="tabBtn"  href="<?= site_url('admin/absensi-izin/add'); ?>">
@@ -35,7 +39,7 @@ $siswalib = new Siswalib();
                                     </a>
                                  </li>
                               </ul>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
