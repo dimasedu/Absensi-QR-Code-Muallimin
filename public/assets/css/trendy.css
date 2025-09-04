@@ -358,7 +358,7 @@ sidebar .nav li a,
     padding: 6px 9px !important;
     border-radius: 6px;
 }
-.form-group .form-control {
+.form-default .form-group .form-control {
     border: 1px solid #ebedf2;
     background: transparent;
     border-radius: 5px;
