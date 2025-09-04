@@ -52,8 +52,7 @@ section {
 
 body {
   margin: 0;
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  font-family: "Public Sans", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -473,8 +472,7 @@ section {
 
 body {
   margin: 0;
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  font-family: "Public Sans", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5946,8 +5944,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  font-family: "Public Sans", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6072,8 +6069,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  font-family: "Public Sans", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -12165,7 +12161,7 @@ fieldset[disabled] .is-focused .switch label:focus {
 .is-focused .form-control {
   background-image: linear-gradient(
       to top,
-      #3e93ff 2px,
+      #9c27b0 2px,
       rgba(156, 39, 176, 0) 2px
     ),
     linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
@@ -15192,8 +15188,7 @@ h6,
 .h2,
 .h3,
 .h4 {
-  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
-  font-family: "Public Sans", sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.5em;
 }
@@ -16194,7 +16189,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 
 .sidebar .nav li.active > a,
 .sidebar .nav li.active > a i {
-  color: #fff !important;
+  color: #fff;
 }
 
 .sidebar .nav li.separator {
@@ -16227,7 +16222,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .sidebar .nav i {
   font-size: 24px;
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
   line-height: 30px;
   width: 30px;
   text-align: center;
@@ -16236,14 +16231,14 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 
 .sidebar .nav li a, 
 .sidebar .nav li .dropdown-menu a {
-    margin: 5px 15px 0;
-    border-radius: 10px;
-    color: #3c4858;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-transform: capitalize;
-    font-size: 13px;
-    padding: 8px 10px;
+  margin: 10px 15px 0;
+  border-radius: 3px;
+  color: #3c4858;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: capitalize;
+  font-size: 13px;
+  padding: 10px 15px;
 }
 
 .sidebar .sidebar-background {
@@ -16329,7 +16324,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-background-color="black"] .nav .nav-item i {
-  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .sidebar[data-background-color="black"]
@@ -16434,12 +16429,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-background-color="black"] .nav .nav-item .nav-link {
-    color: rgb(87, 89, 98);
-    font-weight: 600;
+    color: #fff;
 }
 
 .sidebar[data-background-color="red"] .nav .nav-item i {
-  color: rgb(141, 148, 152);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .sidebar[data-background-color="red"]
@@ -18079,7 +18073,7 @@ thead.thead-inverse th,
 }
 
 body {
-  background-color: rgb(245, 247, 253);
+  background-color: #eee;
   color: #3c4858;
   font-weight: 300;
 }
@@ -18482,14 +18476,15 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 
 .card {
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-    border-radius: 10px;
-    background-color: #fff;
-    margin-bottom: 30px;
-    -webkit-box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
-    -moz-box-shadow: 2px 6px 15px 0 rgba(69,65,78,.1);
-    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
-    border: 0;
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 6px;
+  color: #333333;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card .card-category:not([class*="text-"]) {
@@ -18521,10 +18516,6 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card.no-shadow .card-header-image,
 .card.no-shadow .card-header-image img {
   box-shadow: none !important;
-}
-.card .card-body {
-    padding: 1.25rem;
-    position: relative;
 }
 
 .card .card-body,
@@ -18737,7 +18728,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 
 .card [class*="card-header-"],
 .card[class*="bg-"] {
-  /* color: #fff; */
+  color: #fff;
 }
 
 .card [class*="card-header-"] .card-title a,
@@ -18746,12 +18737,12 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card[class*="bg-"] .card-title a,
 .card[class*="bg-"] .card-title,
 .card[class*="bg-"] .icon i {
-  /* color: #fff; */
+  color: #fff;
 }
 
 .card [class*="card-header-"] .icon i,
 .card[class*="bg-"] .icon i {
-  /* border-color: rgba(255, 255, 255, 0.25); */
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .card [class*="card-header-"] .author a,
@@ -18762,7 +18753,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card[class*="bg-"] .stats,
 .card[class*="bg-"] .card-category,
 .card[class*="bg-"] .card-description {
-  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .card [class*="card-header-"] .author a:hover,
@@ -18771,7 +18762,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card[class*="bg-"] .author a:hover,
 .card[class*="bg-"] .author a:focus,
 .card[class*="bg-"] .author a:active {
-  /* color: #fff; */
+  color: #fff;
 }
 
 .card .author .avatar {
@@ -18829,7 +18820,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 
 .card {
-  /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); */
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 .card .table tr:first-child td {
@@ -18844,7 +18835,6 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 .card .card-body {
   padding: 0.9375rem 20px;
   position: relative;
-  margin:0 !important
 }
 
 .card .card-body .form-group {
@@ -18857,22 +18847,6 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 
 .card .card-header .card-title {
     margin-bottom: 3px;
-    margin: 0;
-    color: #1d335f;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.6;
-}
-.card .card-header .card-title b {
-    font-weight: 600;
-}
-.card-header.card-header-primary, .card-header {
-    background: transparent !important;
-    box-shadow: none !important;
-    margin-top: 0 !important;
-    border-bottom: 1px solid #ebecec !important;
-    margin: 0 !important;
-    padding: 1rem 1.25rem !important;
 }
 
 .card .card-header .card-category {
@@ -19000,11 +18974,11 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 
 .card [class*="card-header-"] .card-title + .card-category {
-  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .card [class*="card-header-"] .card-title + .card-category a {
-  /* color: #fff; */
+  color: #fff;
 }
 
 .card
@@ -20951,20 +20925,6 @@ Copyright (c) 2015 Daniel Eden
   .sidebar .navbar-form {
     display: none !important;
   }
-}
-.sidebar {
-    background: transparent !important;
-    box-shadow: none;
-}
-.sidebar-background {
-    display: none !important;
-}
-.previewParent {
-    width: auto;
-    height: auto;
-    margin: 20px auto 0 !important;
-    border: 2px solid #ddd !important;
-    border-radius: 5px;
 }
 
 /*# sourceMappingURL=material-dashboard.css.map */
