@@ -10,7 +10,7 @@
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= base_url('admin/kelas/' . $data['id_kelas']); ?>" method="post">
+            <form action="<?= base_url('admin/kelas/' . $data['id_kelas']); ?>" method="post" class="form-default">
               <input type="hidden" name="_method" value="PATCH">
               <?= csrf_field() ?>
               <?php $validation = \Config\Services::validation(); ?>
@@ -25,7 +25,7 @@
                   </div>
                 </div>
               <?php endif; ?>
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="kode">Kode</label>
                 <input type="text" id="kode" class="form-control <?= $validation->getError('kode') ? 'is-invalid' : ''; ?>" name="kode" placeholder="Masukkan Kode (Tanpa Spasi)" value="<?= old('kode') ?? $oldInput['kode'] ?? $data['kode'] ?>">
                 <div class="invalid-feedback">
@@ -40,7 +40,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-12">
+                <div class="col-12 form-group mt-4">
                   <label for="id_jurusan">Jurusan</label>
                   <select class="custom-select <?= $validation->getError('id_jurusan') ? 'is-invalid' : ''; ?>" id="id_jurusan" name="id_jurusan">
                     <option value="">--Pilih Jurusan--</option>
@@ -57,7 +57,7 @@
               </div>
 
               <div class="row">
-                <div class="col-12">
+                <div class="col-12 form-group mt-4">
                   <label for="id_wali">Walikelas</label>
                   <select class="custom-select <?= $validation->getError('id_wali') ? 'is-invalid' : ''; ?>" id="id_wali" name="id_wali">
                     <option value="">--Pilih Wali--</option>
@@ -74,8 +74,6 @@
               </div>
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
-
-            <hr>
           </div>
         </div>
       </div>

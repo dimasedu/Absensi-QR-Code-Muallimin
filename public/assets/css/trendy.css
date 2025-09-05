@@ -303,7 +303,7 @@ sidebar .nav li a,
 .card.card-chart .card-header-primary:not(.card-header-icon):not(.card-header-text){
     background: linear-gradient(60deg, #ab47bc, #8e24aa) !important;
 }
-.card-header .btn {
+.card-header .btn, .modal-footer .btn {
     padding: 9px 20px;
     border-radius: 4px;
 }
@@ -325,8 +325,8 @@ sidebar .nav li a,
     border-color: #1572e8 !important;
 }
 .btn-secondary {
-    background: #6861ce !important;
-    border-color: #6861ce !important;
+    /* background: #6861ce !important;
+    border-color: #6861ce !important; */
 }
 .btn-info {
     background: #48abf7 !important;
@@ -353,6 +353,7 @@ sidebar .nav li a,
     padding: 6px 9px !important;
     align-items: center;
     border-radius: 6px;
+    background: #1572e8;
 }
 .btn-edit ~ .btn {
     padding: 6px 9px !important;
@@ -399,4 +400,22 @@ sidebar .nav li a,
 }
 .form-default .form-group {
     padding-bottom: 0;
+}
+.modal-content {
+    box-shadow: 2px 6px 15px 0 rgba(69, 65, 78, .1);
+    border: 0;
+    border-radius: 10px;
+}
+.modal-title {
+    font-weight: 500;
+}
+div.dt-container select.dt-input {
+    padding: 4px;
+    margin-right: 6px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+div.dt-container .dt-search input {
+    border: 1px solid #ddd !important;
+    margin-left: 5px !important;
 }

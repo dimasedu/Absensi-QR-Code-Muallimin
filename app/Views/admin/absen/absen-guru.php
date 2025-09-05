@@ -11,13 +11,28 @@
          </div>
       </div>
       <div class="card primary">
+         <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+            <div>
+               <h4 class="card-title"><b>Absen Guru</b> </h4>
+               <p class="mb-0">Daftar guru muncul disini</p>
+            </div>
+            <div>
+               <a class="btn btn-danger" href="<?= base_url('admin/absensi-guru-reset'); ?>">
+                  <i class="material-icons mr-2">refresh</i> Reset Absensi
+               </a>
+               <a href="#" class="btn btn-success pl-3 ml-3" onclick="kelas = getGuru()" data-toggle="tab">
+                  <i class="material-icons mr-2">refresh</i> Refresh
+               </a>
+            </div>
+         </div>
          <div class="card-body">
-            <div class="row justify-content-between">
+            <!-- <div class="row justify-content-between">
                <div class="col">
                   <div class="pt-3 pl-3">
-                     <h4><b>Absen Guru</b>  <a class="btn btn-danger" href="<?= base_url('admin/absensi-guru-reset'); ?>">
-               <i class="material-icons mr-2">refresh</i> RESET ABSENSI
-            </a></h4>
+                     <h4><b>Absen Guru</b>  
+                     <a class="btn btn-danger" href="<?= base_url('admin/absensi-guru-reset'); ?>">
+                        <i class="material-icons mr-2">refresh</i> RESET ABSENSI
+                     </a></h4>
                      <p>Daftar guru muncul disini</p>
                   </div>
                </div>
@@ -26,7 +41,7 @@
                      <i class="material-icons mr-2">refresh</i> Refresh
                   </a>
                </div>
-            </div>
+            </div> -->
 
             <div id="dataGuru">
 

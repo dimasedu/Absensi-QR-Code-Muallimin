@@ -1,4 +1,4 @@
-<div id="dataSiswa" class="card-body table-responsive pb-5">
+<div id="dataSiswa" class=" table-responsive">
    <?php if (!empty($data)) : ?>
       <table class="table table-hover">
          <thead class="text-success">
@@ -32,9 +32,8 @@
                   <td><?= $value['keterangan'] ?? '-'; ?></td>
                   <td>
                      <?php if (!$lewat) : ?>
-                        <button data-toggle="modal" data-target="#ubahModal" onclick="getDataKehadiran(<?= $value['id_presensi'] ?? '-1'; ?>, <?= $value['id_guru']; ?>)" class="btn btn-info p-2" id="<?= $value['id_guru']; ?>">
+                        <button data-toggle="modal" data-target="#ubahModal" onclick="getDataKehadiran(<?= $value['id_presensi'] ?? '-1'; ?>, <?= $value['id_guru']; ?>)" class="btn btn-edit" id="<?= $value['id_guru']; ?>">
                            <i class="material-icons">edit</i>
-                           Edit
                         </button>
                      <?php else : ?>
                         <button class="btn btn-disabled p-2">No Action</button>

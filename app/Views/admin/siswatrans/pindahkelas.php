@@ -19,25 +19,19 @@
           <div class="card-header card-header-primary">
             <div class="nav-tabs-navigation">
                 <div class="row">
-                <div class="col-md-12">
-                    <h4 class="card-title"><b>Pindah Kelas</b></h4>
-                    <p class="card-category">Fitur ini digunakan untuk memindahkan siswa yang sudah memiliki kelas pada tahun ajaran yang sama.</p>
-                </div>
-                <div class="col-md-12">
-                    <div class="nav-tabs-wrapper">
-                        <span class="nav-tabs-title"><b>PILIH KELAS :</b></span>
-                       
-                    </div>
-                </div>
+                  <div class="col-md-12">
+                      <h4 class="card-title"><b>Pindah Kelas</b></h4>
+                      <p class="card-category">Fitur ini digunakan untuk memindahkan siswa yang sudah memiliki kelas pada tahun ajaran yang sama.</p>
+                  </div>
                 
                 </div>
             </div>
           </div>
           <div class="card-body mx-5 my-3">
             
-            <form action="<?= site_url('admin/mutasi-proses'); ?>" method="post" enctype="multipart/form-data">
-                <div class="row">
-                  <div class="col-md-4">
+            <form action="<?= site_url('admin/mutasi-proses'); ?>" method="post" enctype="multipart/form-data" class="form-default">
+                <div class="row mb-3">
+                  <div class="col-md-4 col-lg-3">
                     <div class="form-group">
                       <label>Pilih Kelas</label>
                       <select name="kelas" id="kelas" class="form-control" onchange="getDataSiswa()">
@@ -55,7 +49,7 @@
                     </div>
                   </div>
 
-                  <div class="col-md-4"><br>
+                  <div class="col-md-4 col-lg-3">
                     <div class="form-group">
                       <label>Th. Ajar Aktif</label>
                       <input type="text" name="thajar_aktif" id="thajar_aktif" value="<?=$thajar_aktif;?>" readonly class="form-control">
@@ -67,8 +61,6 @@
                 <div id="dataSiswa"></div>
             
             </form>
-
-            <hr>
           </div>
         </div>
       </div>

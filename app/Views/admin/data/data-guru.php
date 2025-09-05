@@ -19,28 +19,36 @@
             <div class="card">
                <div class="card-header card-header-tabs card-header-success">
                   <div class="nav-tabs-navigation">
-                     <div class="row">
-                        <div class="col">
+                     <div class="row align-items-center">
+                        <div class="col mb-3 mb-md-0">
                            <h4 class="card-title"><b>Daftar Guru & Staf</b></h4>
                            <p class="card-category"> Data Guru dan Staf Aktif.</p>
                         </div>
                         <div class="col-auto">
-                           <div class="nav-tabs-wrapper">
+                           <a class="btn btn-primary" id="tabBtn" onclick="removeHover()" href="<?= base_url('admin/guru/create'); ?>">
+                              <i class="material-icons">add</i> Tambah data guru
+                              <div class="ripple-container"></div>
+                           </a>
+                           <a class="btn btn-info ml-2" id="refreshBtn" onclick="getDataGuru()" href="#" data-toggle="tab">
+                              <i class="material-icons">refresh</i> Refresh
+                              <div class="ripple-container"></div>
+                           </a>
+                           <!-- <div class="nav-tabs-wrapper">
                               <ul class="nav nav-tabs" data-tabs="tabs">
                                  <li class="nav-item">
-                                    <a class="nav-link" id="tabBtn" onclick="removeHover()" href="<?= base_url('admin/guru/create'); ?>">
+                                    <a class="nav-link btn btn-primary" id="tabBtn" onclick="removeHover()" href="<?= base_url('admin/guru/create'); ?>">
                                        <i class="material-icons">add</i> Tambah data guru
                                        <div class="ripple-container"></div>
                                     </a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" id="refreshBtn" onclick="getDataGuru()" href="#" data-toggle="tab">
+                                    <a class="nav-link btn btn-info" id="refreshBtn" onclick="getDataGuru()" href="#" data-toggle="tab">
                                        <i class="material-icons">refresh</i> Refresh
                                        <div class="ripple-container"></div>
                                     </a>
                                  </li>
                               </ul>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>

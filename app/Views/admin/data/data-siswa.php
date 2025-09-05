@@ -16,54 +16,29 @@
             <?php endif; ?>
             <form action="<?=base_url('admin/kartupelajar')?>" method="POST">
             <?= csrf_field() ?>
-            <a class="btn btn-primary ml-1 pl-3 py-3" href="<?= base_url('admin/siswa/create'); ?>">
-               <i class="material-icons mr-2">add</i> Tambah data siswa
-            </a>
-            <button class="btn btn-info ml-1 pl-3 py-3" type="submit"><i class="material-icons mr-2">print</i> Cetak Kartu</button>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success ml-1 pl-3 py-3" data-bs-toggle="modal" data-bs-target="#importModal">
-            <i class="material-icons mr-1">file_upload</i> Import Data Siswa
-            </button>
-            
-
-            <a class="btn btn-danger ml-1 pl-3 py-3" href="<?= base_url('admin/siswa/cetakantrian'); ?>">
-               <i class="material-icons mr-2">list</i> Antrian Cetak
-            </a>
             
             <div class="card">
                <div class="card-header card-header-tabs card-header-primary">
-                  <div class="nav-tabs-navigation">
-                     <div class="row">
-                        <div class="col-md-2">
-                           <h4 class="card-title"><b>Daftar Siswa</b></h4>
-                           <p class="card-category">Angkatan <?= \Config\Services::session()->get('thajar'); ?></p>
-                        </div>
-                        <div class="col-md-8">
-                           <div class="nav-tabs-wrapper">
-                              <span class="nav-tabs-title">Kelas:</span>
-                              <ul class="nav nav-tabs" data-tabs="tabs">
-                                 <li class="nav-item">
-                                    <a class="nav-link active" onclick="kelas = 'all'; trig()" href="#" data-toggle="tab">
-                                       <i class="material-icons">check</i> Semua
-                                       <div class="ripple-container"></div>
-                                    </a>
-                                 </li>
-                                 <?php
-                                 $tempKelas = [];
-                                 foreach ($kelas as $value) : ?>
-                                    <?php if (!in_array($value['kode'], $tempKelas)) : ?>
-                                       <li class="nav-item">
-                                          <a class="nav-link" onclick="kelas = '<?= $value['kode']; ?>'; trig()" href="#" data-toggle="tab">
-                                             <i class="material-icons">school</i> <?= $value['kelas'].' '.$value['jurusan']; ?>
-                                             <div class="ripple-container"></div>
-                                          </a>
-                                       </li>
-                                       <?php array_push($tempKelas, $value['kode']) ?>
-                                    <?php endif; ?>
-                                 <?php endforeach; ?>
-                              </ul>
-                           </div>
-                        </div>
+                  <div class="d-md-flex justify-content-between align-items-center">
+                     <div>
+                        <h4 class="card-title"><b>Daftar Siswa</b></h4>
+                        <p class="card-category">Angkatan <?= \Config\Services::session()->get('thajar'); ?></p>
+                     </div>
+                     <div class="mt-3 mt-md-0">
+                        <a class="btn btn-primary ml-1 " href="<?= base_url('admin/siswa/create'); ?>">
+                           <i class="material-icons mr-2">add</i> Tambah data siswa
+                        </a>
+                        <button class="btn btn-info ml-1 " type="submit"><i class="material-icons mr-2">print</i> Cetak Kartu</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success ml-1 " data-bs-toggle="modal" data-bs-target="#importModal">
+                        <i class="material-icons mr-1">file_upload</i> Import Data Siswa
+                        </button>
+                        
+
+                        <a class="btn btn-danger ml-1 " href="<?= base_url('admin/siswa/cetakantrian'); ?>">
+                           <i class="material-icons mr-2">list</i> Antrian Cetak
+                        </a>
+                     </div>
                         <!-- <div class="col-md-6">
                            <div class="nav-tabs-wrapper">
                               <span class="nav-tabs-title">Jurusan:</span>
@@ -85,13 +60,41 @@
                               </ul>
                            </div>
                         </div> -->
+                  </div>
+               </div>
+               <div class="card-body">
+                  <div class="nav-tabs-navigation">
+                     <div class="nav-tabs-wrapper">
+                        <!-- <span class="nav-tabs-title">Kelas:</span> -->
+                        <h4><b>Pilih Kelas</b></h4>
+                        <ul class="nav nav-tabs px-0 mb-4" data-tabs="tabs">
+                           <li class="nav-item mr-2 mb-2">
+                              <a class="nav-link active btn btn-primary" onclick="kelas = 'all'; trig()" href="#" data-toggle="tab">
+                                 <i class="material-icons">check</i> Semua
+                                 <div class="ripple-container"></div>
+                              </a>
+                           </li>
+                           <?php
+                           $tempKelas = [];
+                           foreach ($kelas as $value) : ?>
+                              <?php if (!in_array($value['kode'], $tempKelas)) : ?>
+                                 <li class="nav-item mr-2 mb-2">
+                                    <a class="nav-link btn btn-primary" onclick="kelas = '<?= $value['kode']; ?>'; trig()" href="#" data-toggle="tab">
+                                       <i class="material-icons">school</i> <?= $value['kelas'].' '.$value['jurusan']; ?>
+                                       <div class="ripple-container"></div>
+                                    </a>
+                                 </li>
+                                 <?php array_push($tempKelas, $value['kode']) ?>
+                              <?php endif; ?>
+                           <?php endforeach; ?>
+                        </ul>
                      </div>
+                  </div>
+                  <div id="dataSiswa">
+                     <p class="text-center mt-3">Daftar siswa muncul disini</p>
                   </div>
                </div>
                
-               <div id="dataSiswa">
-                  <p class="text-center mt-3">Daftar siswa muncul disini</p>
-               </div>
             </div>
 
             </form>

@@ -49,13 +49,13 @@
                     </p>
                     <div class="row px-2">
                       <div class="col-12 col-xl-6 px-1">
-                        <button onclick="generateAllQrSiswa()" class="btn btn-primary p-2 px-md-4 w-100">
+                        <button onclick="generateAllQrSiswa()" class="btn btn-primary p-2 py-3 px-md-4 w-100">
                           <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                             <div>
                               <i class="material-icons" style="font-size: 24px;">qr_code</i>
                             </div>
                             <div>
-                              <h4 class="d-inline font-weight-bold">Generate All</h4>
+                              <div class="d-inline font-weight-bold">Generate All</div>
                               <div id="progressSiswa" class="d-none mt-2">
                                 <span id="progressTextSiswa"></span>
                                 <i id="progressSelesaiSiswa" class="material-icons d-none" class="d-none">check</i>
@@ -68,14 +68,14 @@
                         </button>
                       </div>
                       <div class="col-12 col-xl-6 px-1">
-                        <a href="<?= base_url('admin/qr/siswa/download'); ?>" class="btn btn-primary p-2 px-md-4 w-100">
+                        <a href="<?= base_url('admin/qr/siswa/download'); ?>" class="btn btn-primary p-2 py-3 px-md-4 w-100">
                           <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                             <div>
                               <i class="material-icons" style="font-size: 24px;">cloud_download</i>
                             </div>
                             <div>
                               <div class="text-start">
-                                <h4 class="d-inline font-weight-bold">Download All</h4>
+                                <div class="d-inline font-weight-bold">Download All</div>
                               </div>
                             </div>
                           </div>
@@ -97,14 +97,14 @@
                       <b class="text-danger mt-2" id="textErrorKelas"></b>
                       <div class="row px-2">
                         <div class="col-12 col-xl-6 px-1">
-                          <button type="button" onclick="generateQrSiswaByKelas()" class="btn btn-primary p-2 px-md-4 w-100">
+                          <button type="button" onclick="generateQrSiswaByKelas()" class="btn btn-primary py-3 p-2 px-md-4 w-100">
                             <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                               <div>
                                 <i class="material-icons" style="font-size: 24px;">qr_code</i>
                               </div>
                               <div>
                                 <div class="text-start">
-                                  <h6 class="d-inline">Generate per kelas</h6>
+                                  <div class="d-inline">Generate per kelas</div>
                                 </div>
                                 <div id="progressKelas" class="d-none">
                                   <span id="progressTextKelas"></span>
@@ -118,14 +118,14 @@
                           </button>
                         </div>
                         <div class="col-12 col-xl-6 px-1">
-                          <button type="submit" class="btn btn-primary p-2 px-md-4 w-100">
+                          <button type="submit" class="btn btn-primary p-2 py-3 px-md-4 w-100">
                             <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                               <div>
                                 <i class="material-icons" style="font-size: 24px;">cloud_download</i>
                               </div>
                               <div>
                                 <div class="text-start">
-                                  <h6 class="d-inline">Download Per Kelas</h6>
+                                  <div class="d-inline">Download Per Kelas</div>
                                 </div>
                               </div>
                             </div>
@@ -151,13 +151,13 @@
                     </p>
                     <div class="row px-2">
                       <div class="col-12 col-xl-6 px-1">
-                        <button onclick="generateAllQrGuru()" class="btn btn-success p-2 px-md-4 w-100">
+                        <button onclick="generateAllQrGuru()" class="btn btn-success p-2 py-3 px-md-4 w-100">
                           <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                             <div>
                               <i class="material-icons" style="font-size: 24px;">qr_code</i>
                             </div>
                             <div>
-                              <h4 class="d-inline font-weight-bold">Generate All</h4>
+                              <div class="d-inline font-weight-bold">Generate All</div>
                               <div>
                                 <div id="progressGuru" class="d-none mt-2">
                                   <span id="progressTextGuru"></span>
@@ -172,14 +172,14 @@
                         </button>
                       </div>
                       <div class="col-12 col-xl-6 px-1">
-                        <a href="<?= base_url('admin/qr/guru/download'); ?>" class="btn btn-success p-2 px-md-4 w-100">
+                        <a href="<?= base_url('admin/qr/guru/download'); ?>" class="btn btn-success p-2 py-3 px-md-4 w-100">
                           <div class="d-flex align-items-center justify-content-center" style="gap: 12px;">
                             <div>
                               <i class="material-icons" style="font-size: 24px;">cloud_download</i>
                             </div>
                             <div>
                               <div class="text-start">
-                                <h4 class="d-inline font-weight-bold">Download All</h4>
+                                <div class="d-inline font-weight-bold">Download All</div>
                               </div>
                             </div>
                           </div>

@@ -2,7 +2,7 @@
 use App\Libraries\Siswalib;
 $siswalib = new Siswalib;
 ?>
-<div class="card-body table-responsive">
+<div class="table-responsive">
    <div id="antriansukses"></div>
    <a href="<?=base_url('admin/siswa/excel/'.$kelasxls.'/'.$jurusanxls);?>" class="btn btn-success btn-sm">Export Excel</a><br>
    <!-- <div class="row">
@@ -67,7 +67,7 @@ $siswalib = new Siswalib;
                   <td><?= $value['no_hp']; ?></td>
                   <td>
                      <div class="d-flex justify-content-center">
-                        <a title="Edit" href="<?= base_url('admin/siswa/edit/' . $value['id_siswa']); ?>" class="btn btn-primary p-2" id="<?= $value['nis']; ?>">
+                        <a title="Edit" href="<?= base_url('admin/siswa/edit/' . $value['id_siswa']); ?>" class="btn btn-edit p-2" id="<?= $value['nis']; ?>">
                            <i class="material-icons">edit</i>
                         </a>
 
