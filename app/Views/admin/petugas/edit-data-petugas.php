@@ -11,7 +11,7 @@
                </div>
                <div class="card-body mx-5 my-3">
 
-                  <form action="<?= base_url('admin/petugas/edit'); ?>" method="post">
+                  <form action="<?= base_url('admin/petugas/edit'); ?>" method="post" class="form-default">
                      <?= csrf_field() ?>
                      <?php $validation = \Config\Services::validation(); ?>
 
@@ -28,7 +28,7 @@
 
                      <input type="hidden" name="id" value="<?= $data['id']; ?>">
 
-                     <div class="form-group mt-4">
+                     <div class="form-group mt-0">
                         <label for="username">Username</label>
                         <input type="text" id="username" class="form-control <?= $validation->getError('username') ? 'is-invalid' : ''; ?>" name="username" placeholder="username123" value="<?= old('username') ?? $oldInput['username'] ?? $data['username'] ?>">
                         <div class="invalid-feedback">
@@ -52,15 +52,17 @@
                         </div>
                      </div>
 
-                     <label for="role">Role</label><br>
-                     <input type="radio" name="role" value="admin" <?= $data['is_superadmin'] == 1 ? 'checked="checked"' : ''; ?>> Administrator&nbsp;
-                     <input type="radio" name="role" value="opscan" <?= $data['is_operator'] == 1 ? 'checked="checked"' : ''; ?>> Operator Scan&nbsp;
-                     <input type="radio" name="role" value="petugas"  <?= $data['is_superadmin'] == 0 && $data['is_operator'] == 0 ? 'checked="checked"' : ''; ?>> Petugas&nbsp;
-                     <div class="invalid-feedback">
-                        <?= $validation->getError('role'); ?>
+                     <div class="form-group mt-4">
+                        <label for="role" class="">Role</label><br>
+                        <input type="radio" name="role" value="admin" class="ml-3" <?= $data['is_superadmin'] == 1 ? 'checked="checked"' : ''; ?>> Administrator&nbsp;
+                        <input type="radio" name="role" value="opscan" class="ml-3" <?= $data['is_operator'] == 1 ? 'checked="checked"' : ''; ?>> Operator Scan&nbsp;
+                        <input type="radio" name="role" value="petugas" class="ml-3"  <?= $data['is_superadmin'] == 0 && $data['is_operator'] == 0 ? 'checked="checked"' : ''; ?>> Petugas&nbsp;
+                        <div class="invalid-feedback">
+                           <?= $validation->getError('role'); ?>
+                     </div>
                      </div>
 
-                     <button type="submit" class="btn btn-primary btn-block mt-3">Simpan</button>
+                     <button type="submit" class="btn btn-primary mt-4">Simpan</button>
                   </form>
                </div>
             </div>

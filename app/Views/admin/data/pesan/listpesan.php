@@ -21,19 +21,17 @@
             
             <div class="card">
                <div class="card-header card-header-tabs card-header-primary">
-                  <div class="nav-tabs-navigation">
-                     <div class="row">
-                        <div class="col-md-12">
+                     <div class="row justify-content-between align-items-center">
+                        <div class="col-auto">
                            <h4 class="card-title"><b>Notifikasi Whatsapp</b></h4>
                            <p class="card-category">Daftar pesan notifikasi whatsapp yang belum terkirim</p>
                         </div>
+                        <div class="col-auto mt-3 mt-md-0">
+                           <button class="btn btn-danger ml-3" type="submit" onlick="return confirm('Apakah yakin akan menghapus data ini?');"><i class="material-icons mr-2">delete</i> Hapus Pesan</button>
+                        </div>
                      </div>
-                  </div>
                </div>
                <div class="row">
-                  <div class="col-lg-2">
-                  <button class="btn btn-danger ml-3 mt-3 " type="submit" onlick="return confirm('Apakah yakin akan menghapus data ini?');"><i class="material-icons mr-2">delete</i> Hapus Pesan</button>
-                  </div>
                </div>
 
                

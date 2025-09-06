@@ -44,7 +44,7 @@
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= site_url('admin/broadcast/save'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/broadcast/save'); ?>" method="post" enctype="multipart/form-data" class="form-default">
               <?= csrf_field() ?>
 
               <?php $validation = \Config\Services::validation(); ?>
@@ -62,7 +62,7 @@
 
               
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="judul">Judul Broadcast</label>
                 <input name="judul" class="form-control" required id="judul" value="<?=old('judul')?>">
                 
@@ -92,7 +92,7 @@
                     <div class="item" data-tool="striketrhough">S</div>
                 </div>
                 <textarea name="pesan" class="form-control" rows="10" required id="input-message"></textarea>
-                <div class="alert alert-success">
+                <div class="alert alert-success mt-3">
                 <b>KETERANGAN PARAMETER:</b><br>
                 <b>UNTUK SISWA</b><br>
                 <ul>
@@ -110,9 +110,8 @@
               </div>
               </div>
 
-              <div class="form-group mt-2">
+              <div class="form-group mt-4">
                 <label for="gambar">Gambar (Opsional)</label>
-                </div>
                 <div class="input-group">
                            <input type="file" id="filefoto" class="form-control" name="filefoto" placeholder="1234" accept=".jpg, .jpeg, .png, .webp" />
                            <div class="invalid-feedback">
@@ -122,6 +121,7 @@
                         <small class="text-danger">File yang diijinkan JPG, JPEG, PNG, WEBP. Maksimal File : 200 Kb</small>
                 
 
+                </div>
               <div class="form-group mt-4">
                 <label for="tanggal">Tanggal Kirim</label>
                 <input name="tanggal" type="datetime-local" class="form-control" required id="tanggal" value="">
@@ -133,8 +133,6 @@
 
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
-
-            <hr>
           </div>
         </div>
       </div>

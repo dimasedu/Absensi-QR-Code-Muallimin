@@ -10,7 +10,7 @@
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= site_url('admin/simpanpengaturan'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/simpanpengaturan'); ?>" method="post" enctype="multipart/form-data" class="form-default">
               <?= csrf_field() ?>
               <input type="hidden" name="filettdlama" value="<?=$query->ttd_kepsek;?>">
               <input type="hidden" name="filelogo1lama" value="<?=$query->logo1;?>">
@@ -31,7 +31,7 @@
                 </div>
               <?php endif; ?>
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="nama">Tahun Ajar Aktif</label>
                 <input type="text" id="thajar" class="form-control " name="thajar" placeholder="Masukkan Tahun Ajar" value="<?= $query->thajar_aktif;?>" required>
               </div>
@@ -82,53 +82,54 @@
                 
               </div>
 
-                <div class="form-group mt-1">
+                <div class="form-group mt-4">
                     <label for="ttd">File TTD<span class="text-danger"><?= $validation->getError('filettd'); ?></span></label>
-                </div>
-                <div class="input-group">
-                    <input type="file" id="filettd" class="form-control <?= $validation->getError('filettd') ? 'is-invalid' : ''; ?>" name="filettd" placeholder="1234" accept=".jpg, .jpeg, .png" />
-                </div>
-                <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
-                <img src="<?=base_url('public/uploads/ttd/'.$query->ttd_kepsek);?>" class="img-fluid" width="150"><br>
 
+                  <div class="input-group">
+                      <input type="file" id="filettd" class="form-control <?= $validation->getError('filettd') ? 'is-invalid' : ''; ?>" name="filettd" placeholder="1234" accept=".jpg, .jpeg, .png" />
+                  </div>
+                  <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
+                  <img src="<?=base_url('public/uploads/ttd/'.$query->ttd_kepsek);?>" class="img-fluid" width="150"><br>
+                </div>
 
-                <div class="form-group mt-1">
+                <div class="form-group mt-4">
                     <label for="ttd">File Logo 1<span class="text-danger"><?= $validation->getError('filelogo1'); ?></span></label>
-                </div>
-                <div class="input-group">
-                    <input type="file" id="filelogo1" class="form-control <?= $validation->getError('filelogo1') ? 'is-invalid' : ''; ?>" name="filelogo1" placeholder="1234" accept=".jpg, .jpeg, .png" />
-                </div>
-                <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
-                <img src="<?=base_url('public/assets/kapel/'.$query->logo1);?>" class="img-fluid" width="150"><br>
 
+                    <div class="input-group">
+                        <input type="file" id="filelogo1" class="form-control <?= $validation->getError('filelogo1') ? 'is-invalid' : ''; ?>" name="filelogo1" placeholder="1234" accept=".jpg, .jpeg, .png" />
+                    </div>
+                    <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
+                    <img src="<?=base_url('public/assets/kapel/'.$query->logo1);?>" class="img-fluid" width="150"><br>
+                </div>
 
-                <div class="form-group mt-1">
+                <div class="form-group mt-4">
                     <label for="ttd">File Logo 2<span class="text-danger"><?= $validation->getError('filelogo2'); ?></span></label>
+                  <div class="input-group">
+                      <input type="file" id="filelogo2" class="form-control <?= $validation->getError('filelogo2') ? 'is-invalid' : ''; ?>" name="filelogo2" placeholder="1234" accept=".jpg, .jpeg, .png" />
+                  </div>
+                  <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
+                  <img src="<?=base_url('public/assets/kapel/'.$query->logo2);?>" class="img-fluid" width="150"><br>
                 </div>
-                <div class="input-group">
-                    <input type="file" id="filelogo2" class="form-control <?= $validation->getError('filelogo2') ? 'is-invalid' : ''; ?>" name="filelogo2" placeholder="1234" accept=".jpg, .jpeg, .png" />
-                </div>
-                <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
-                <img src="<?=base_url('public/assets/kapel/'.$query->logo2);?>" class="img-fluid" width="150"><br>
 
-                <div class="form-group mt-1">
+                <div class="form-group mt-4">
                     <label for="ttd">File Background Kartu Pelajar<span class="text-danger"><?= $validation->getError('filebackground'); ?></span></label>
-                </div>
-                <div class="input-group">
-                    <input type="file" id="filebackground" class="form-control <?= $validation->getError('filebackground') ? 'is-invalid' : ''; ?>" name="filebackground" placeholder="1234" accept=".jpg, .jpeg, .png" />
-                </div>
-                <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
-                <img src="<?=base_url('public/assets/kapel/'.$query->background_kartu);?>" class="img-fluid" width="150"><br>
 
-                <div class="form-group mt-1">
+                    <div class="input-group">
+                        <input type="file" id="filebackground" class="form-control <?= $validation->getError('filebackground') ? 'is-invalid' : ''; ?>" name="filebackground" placeholder="1234" accept=".jpg, .jpeg, .png" />
+                    </div>
+                    <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
+                    <img src="<?=base_url('public/assets/kapel/'.$query->background_kartu);?>" class="img-fluid" width="150"><br>
+                </div>
+
+                <div class="form-group mt-4">
                     <label for="ttd">File Stempel<span class="text-danger"><?= $validation->getError('filestempel'); ?></span></label>
-                </div>
-                <div class="input-group">
-                    <input type="file" id="filestempel" class="form-control <?= $validation->getError('filestempel') ? 'is-invalid' : ''; ?>" name="filestempel" placeholder="1234" accept=".jpg, .jpeg, .png" />
-                </div>
-                <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
-                <img src="<?=base_url('public/uploads/ttd/'.$query->stempel);?>" class="img-fluid" width="150"><br>
 
+                    <div class="input-group">
+                        <input type="file" id="filestempel" class="form-control <?= $validation->getError('filestempel') ? 'is-invalid' : ''; ?>" name="filestempel" placeholder="1234" accept=".jpg, .jpeg, .png" />
+                    </div>
+                    <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small><br>
+                    <img src="<?=base_url('public/uploads/ttd/'.$query->stempel);?>" class="img-fluid" width="150"><br>
+                </div>
 
               <div class="form-group mt-4">
                 <label for="url">URL WA API (Pastikan Gunakan Kedai WA)</label>
@@ -152,7 +153,6 @@
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
 
-            <hr>
           </div>
         </div>
       </div>

@@ -21,26 +21,26 @@
             <?php endif; ?>
            
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="judul"><b>Judul Broadcast</b></label><br>
                 <?=$query->judul;?>
               </div>
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-3">
                 <label for="tanggal"><b>Tanggal Kirim</b></label><br>
                 <?=date('Y-m-d H:i:s',strtotime($query->sent_at))?> WIB
                 
               </div>
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-3">
                 <label for="kelas"><b>Group Kontak</b></label><br>
                 <?=$query->id_kelas == "gr" ? 'Guru & Staf' : $query->kelas. ' ('.$query->jurusan.')';?>
                 
               </div>
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-3">
                 <label for="pesan"><b>Pesan Broadcast</b></label><br>
-                <div class="alert alert-light">
+                <div class="alert alert-light p-0">
                     <?=$query->isi_pesan;?>
                 </div>
                 
@@ -58,7 +58,7 @@
                 </div>
 
             <hr>
-            <h4>Statistik Broadcast</h4>
+            <h4><b>Statistik Broadcast</b></h4>
             <table class="table table-striepd">
                     <tr>
                         <td><span class="text-info"><b>Total Kontak</b></span></td>
@@ -85,7 +85,7 @@
                     </tr>
                 </table>
 
-                <h4>Log Pesan</h4>
+                <h4><b>Log Pesan</b></h4>
                 <table class="table table-bordered table-striped">
                   <tr>
                     <th>No</th>
@@ -109,9 +109,8 @@
                   endforeach;
                   ?>
                 </table>
-          </div>
-          <div class="card-footer mx-5 my-3">
-            <a href="<?=site_url('admin/broadcast')?>" class="btn btn-danger">Kembali</a>
+                
+                <a href="<?=site_url('admin/broadcast')?>" class="btn btn-danger">Kembali</a>
           </div>
         </div>
       </div>

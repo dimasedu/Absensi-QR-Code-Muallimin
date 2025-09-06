@@ -20,10 +20,10 @@
                         </div>
                     <?php endif ?>
 
-                        <form action="<?= site_url('admin/petugas/simpan') ?>" method="post">
+                        <form action="<?= site_url('admin/petugas/simpan') ?>" method="post" class="form-default">
                             <?= csrf_field() ?>
 
-                            <div class="form-group mt-4">
+                            <div class="form-group mt-0">
                                 <label for="email"><?= lang('Auth.email') ?></label>
                                 <input type="email" id="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="example@email.com" value="<?= old('email') ?>" required>
                                 <?php if (session('errors.email')) : ?>
@@ -57,13 +57,14 @@
                                 </div>
                             </div>
 
-                            <label for="role">Role</label><br>
-                            <input type="radio" name="role" value="admin" <?= old('role') == "admin" ? 'checked="checked"' : ''; ?> required> Administrator&nbsp;
-                            <input type="radio" name="role" value="opscan" <?= old('role') == "opsanc" ? 'checked="checked"' : ''; ?> required> Operator Scan&nbsp;
-                            <input type="radio" name="role" value="petugas"  <?= old('petugas') ? 'checked="checked"' : ''; ?> required> Petugas&nbsp;
-                            
+                            <div class="form-group mt-4">
+                                <label for="role">Role</label><br>
+                                <input type="radio" name="role" value="admin" <?= old('role') == "admin" ? 'checked="checked"' : ''; ?> required> Administrator&nbsp;
+                                <input type="radio" name="role" value="opscan" class="ml-3" <?= old('role') == "opsanc" ? 'checked="checked"' : ''; ?> required> Operator Scan&nbsp;
+                                <input type="radio" name="role" value="petugas" class="ml-3"  <?= old('petugas') ? 'checked="checked"' : ''; ?> required> Petugas&nbsp;
+                            </div>
 
-                            <button type="submit" class="btn btn-info btn-block mt-5"><?= lang('Auth.register') ?></button>
+                            <button type="submit" class="btn btn-primary mt-4"><?= lang('Auth.register') ?></button>
                         </form>
                     </div>
                 </div>

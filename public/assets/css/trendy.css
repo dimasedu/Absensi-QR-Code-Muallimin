@@ -3,6 +3,7 @@ body, html {
     color: #2a2f5b;body 
     font-family: "Public Sans", sans-serif;
     background-color: rgb(245, 247, 253);
+    min-height:100vh;
 }
 body,
 h1,
@@ -328,7 +329,7 @@ sidebar .nav li a,
     /* background: #6861ce !important;
     border-color: #6861ce !important; */
 }
-.btn-info {
+/* .btn-info {
     background: #48abf7 !important;
     border-color: #48abf7 !important;
     color: #fff !important;
@@ -344,7 +345,7 @@ sidebar .nav li a,
 .btn-danger {
     background: #f25961 !important;
     border-color: #f25961 !important;
-}
+} */
 .btn-link {
     border: 0 !important;
     background: 0 0 !important;
