@@ -21,16 +21,14 @@
                else echo 'Petugas';?></td>
                   <td>
                      
-                        <a href="<?= base_url('admin/petugas/edit/' . $value['id']); ?>" type="button" class="btn btn-info p-2" id="<?= $value['username']; ?>">
-                           <i class="material-icons">edit</i>
-                           Edit
-                        </a>
                         <form action="<?= base_url('admin/petugas/delete/' . $value['id']); ?>" method="post" class="d-inline">
                            <?= csrf_field(); ?>
+                           <a href="<?= base_url('admin/petugas/edit/' . $value['id']); ?>" type="button" class="btn btn-edit p-2" id="<?= $value['username']; ?>">
+                              <i class="material-icons">edit</i>
+                           </a>
                            <input type="hidden" name="_method" value="DELETE">
                            <button onclick="return confirm('Konfirmasi untuk menghapus data');" type="submit" class="btn btn-danger p-2" id="<?= $value['username']; ?>">
                               <i class="material-icons">delete_forever</i>
-                              Delete
                            </button>
                         </form>
                   </td>

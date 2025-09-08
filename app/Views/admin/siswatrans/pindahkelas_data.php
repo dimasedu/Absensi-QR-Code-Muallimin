@@ -14,7 +14,7 @@
     <tbody>
         <?php $i = 1;
         foreach ($data as $value) : ?>
-        <tr>
+        <tr class="form-default">
             <td><input type="checkbox" name="id[]" value="<?=$value['id_siswa'];?>"></td>
             <td><?= $i; ?></td>
             <td><?= $value['nis']; ?></td>
@@ -22,16 +22,16 @@
             <td><?= $value['jenis_kelamin']; ?></td>
             <td><?= $value['kelas'].' '.$value['jurusan']; ?></td>
             <td><?= $value['th_ajar']; ?></td>
-            <td><textarea name="keterangan[]" id="keterangan" class="form-control" placeholder="Masukkan Keterangan (Opsional)"></textarea></td>
+            <td class="form-group py-2"><textarea name="keterangan[]" id="keterangan" class="form-control" placeholder="Masukkan Keterangan (Opsional)"></textarea></td>
         </tr>
         <?php $i++;
         endforeach; ?>
     </tbody>
 </table>
 
-
-<div class="row mt-3">
-    <div class="col-lg-4">
+<hr/>
+<div class="row mt-3 form-default align-items-end py-3">
+    <div class="col-md-4 col-lg-3 form-group">
         <label>Naik / Pindah Ke Kelas</label>
         <select name="kelas" id="kelas" class="form-control" required>
             <option value="">--Pilih Kelas--</option>
@@ -43,12 +43,12 @@
             ?>
         </select>
     </div>
-    <div class="col-lg-4">
+    <div class="col-md-4 col-lg-3 form-group">
         <label>Tahun Ajaran</label>
         <input type="text" name="thajar" id="thajar" class="form-control" value="<?=$thajar_next;?>" readonly>
     </div>
     <div class="col-lg-4">
-    <button type="submit" class="btn btn-success">
+    <button type="submit" class="btn btn-primary my-0">
         <i class="material-icons">download_done</i> Simpan Data
     </button>
     </div>

@@ -37,7 +37,7 @@
                   <td><?= $value['alamat']; ?></td>
                   <td>
                      <div class="d-flex justify-content-center">
-                        <a title="Edit" href="<?= base_url('admin/guru/edit/' . $value['id_guru']); ?>" class="btn btn-success p-2" id="<?= $value['nuptk']; ?>">
+                        <a title="Edit" href="<?= base_url('admin/guru/edit/' . $value['id_guru']); ?>" class="btn btn-edit p-2" id="<?= $value['nuptk']; ?>">
                            <i class="material-icons">edit</i>
                         </a>
                         <form action="<?= base_url('admin/guru/delete/' . $value['id_guru']); ?>" method="post" class="d-inline">

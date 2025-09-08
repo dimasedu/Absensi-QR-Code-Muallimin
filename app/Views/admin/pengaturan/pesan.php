@@ -10,7 +10,7 @@
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= site_url('admin/simpanpengaturanpesan'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/simpanpengaturanpesan'); ?>" method="post" enctype="multipart/form-data" class="form-default">
               <?= csrf_field() ?>
 
               <?php $validation = \Config\Services::validation(); ?>
@@ -28,7 +28,7 @@
 
               
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="url">Registrasi Siswa</label>
                 <textarea name="pesanregistrasi" class="form-control" rows="5" required id="pesanregistrasi"><?=$query->pesan_registrasi;?></textarea>
                 
@@ -69,8 +69,6 @@
 
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
-
-            <hr>
           </div>
         </div>
       </div>

@@ -53,31 +53,35 @@
                                  <?php endforeach; ?>
                               </select>
                               <div class="errMsg"></div>
-                              <div class="mt-auto d-flex flex-column">
-                                 <button type="submit" name="type" value="pdf" class="btn btn-danger pl-3">
-                                    <div class="row align-items-center">
-                                       <div class="col-auto">
-                                          <i class="material-icons" style="font-size: 32px;">print</i>
-                                       </div>
-                                       <div class="col">
-                                          <div class="text-start">
-                                             <h4 class="d-inline"><b>Generate pdf</b></h4>
+                              <div class="row mt-auto">
+                                 <div class="col-12 col-xl-6">
+                                    <button type="submit" name="type" value="pdf" class="btn btn-danger pl-3 w-100">
+                                       <div class="row align-items-center">
+                                          <div class="col-auto">
+                                             <i class="material-icons" style="font-size: 24px;">print</i>
+                                          </div>
+                                          <div class="col">
+                                             <div class="text-start">
+                                                <div class="d-inline"><b>Generate pdf</b></div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                 </button>
-                                 <button type="submit" name="type" value="doc" class="btn btn-info pl-3">
-                                    <div class="row align-items-center">
-                                       <div class="col-auto">
-                                          <i class="material-icons" style="font-size: 32px;">description</i>
-                                       </div>
-                                       <div class="col">
-                                          <div class="text-start">
-                                             <h4 class="d-inline"><b>Generate doc</b></h4>
+                                    </button>
+                                 </div>
+                                 <div class="col-12 col-xl-6">
+                                    <button type="submit" name="type" value="doc" class="btn btn-info pl-3 w-100">
+                                       <div class="row align-items-center">
+                                          <div class="col-auto">
+                                             <i class="material-icons" style="font-size: 24px;">description</i>
+                                          </div>
+                                          <div class="col">
+                                             <div class="text-start">
+                                                <div class="d-inline"><b>Generate doc</b></div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                 </button>
+                                    </button>
+                                 </div>
                                  <!-- <button type="submit" name="type" value="xls" class="btn btn-success pl-3 mt-auto">
                                  <div class="row align-items-center">
                                     <div class="col-auto">
@@ -108,31 +112,35 @@
                                     <input type="month" name="tanggalGuru" id="tanggalGuru" class="form-control" value="<?= date('Y-m'); ?>">
                                  </div>
                               </div>
-                              <div class="mt-auto d-flex flex-column">
-                                 <button type="submit" name="type" value="pdf" class="btn btn-danger pl-3">
-                                    <div class="row align-items-center">
-                                       <div class="col-auto">
-                                          <i class="material-icons" style="font-size: 32px;">print</i>
-                                       </div>
-                                       <div class="col">
-                                          <div class="text-start">
-                                             <h4 class="d-inline"><b>Generate pdf</b></h4>
+                              <div class="row mt-auto">
+                                 <div class="col-12 col-xl-6">
+                                    <button type="submit" name="type" value="pdf" class="btn btn-danger pl-3 w-100">
+                                       <div class="row align-items-center">
+                                          <div class="col-auto">
+                                             <i class="material-icons" style="font-size: 24px;">print</i>
+                                          </div>
+                                          <div class="col">
+                                             <div class="text-start">
+                                                <div class="d-inline"><b>Generate pdf</b></div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                 </button>
-                                 <button type="submit" name="type" value="doc" class="btn btn-info pl-3">
-                                    <div class="row align-items-center">
-                                       <div class="col-auto">
-                                          <i class="material-icons" style="font-size: 32px;">description</i>
-                                       </div>
-                                       <div class="col">
-                                          <div class="text-start">
-                                             <h4 class="d-inline"><b>Generate doc</b></h4>
+                                    </button>
+                                 </div>
+                                 <div class="col-12 col-xl-6">
+                                    <button type="submit" name="type" value="doc" class="btn btn-info pl-3 w-100">
+                                       <div class="row align-items-center">
+                                          <div class="col-auto">
+                                             <i class="material-icons" style="font-size: 24px;">description</i>
+                                          </div>
+                                          <div class="col">
+                                             <div class="text-start">
+                                                <div class="d-inline"><b>Generate doc</b></div>
+                                             </div>
                                           </div>
                                        </div>
-                                    </div>
-                                 </button>
+                                    </button>
+                                 </div>
                               </div>
                            </form>
                         </div>

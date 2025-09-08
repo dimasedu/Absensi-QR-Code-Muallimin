@@ -22,7 +22,7 @@
           </div>
           <div class="card-body mx-5 my-3">
             
-            <form action="<?= site_url('admin/berikelas-proses'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/berikelas-proses'); ?>" method="post" enctype="multipart/form-data" class="form-default">
             <?php if (!empty($data)) : ?>
                 <table class="table table-hover" id="tabledata">
                     <thead class="text-primary">
@@ -51,8 +51,9 @@
                 </table>
                 
 
-                <div class="row mt-4">
-                    <div class="col-lg-4">
+                <div class="row mt-4 align-items-end  ">
+                    <div class="col-md-4 col-lg-3 form-group">
+                        <label for="">Kelas</label>
                         <select name="kelas" id="kelas" class="form-control" required>
                             <option value="">--Pilih Kelas--</option>
                             <?php
@@ -62,11 +63,12 @@
                             ?>
                         </select>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-4 col-lg-3 form-group">
+                        <label for="">Tahun Ajaran</label>
                         <input type="text" name="thajar" id="thajar" class="form-control" value="<?=$thajar?>" readonly>
                     </div>
                     <div class="col-lg-4">
-                    <button type="submit" class="btn btn-success">
+                    <button type="submit" class="btn btn-primary">
                         <i class="material-icons">download_done</i> Simpan Data
                     </button>
                     </div>
@@ -83,8 +85,6 @@
                 <?php endif; ?>
             
             </form>
-
-            <hr>
           </div>
         </div>
       </div>

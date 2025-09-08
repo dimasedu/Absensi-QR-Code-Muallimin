@@ -50,7 +50,7 @@
                             if($value['tipe'] == 'lulus') echo '<span class="badge badge-danger">Lulus / Keluar</span>';?>
                             </td>
                             <td>
-                            <a href="<?= base_url('admin/mutasi-edit-ubah/' . $value['id']); ?>" class="btn btn-primary p-2">
+                            <a href="<?= base_url('admin/mutasi-edit-ubah/' . $value['id']); ?>" class="btn btn-edit p-2">
                                 <i class="material-icons">edit</i>
                             </a>&nbsp;
                             <a href="<?= base_url('admin/mutasi-edit-delete/' . $value['id']); ?>" class="btn btn-danger p-2" onclick="return confirm('PERHATIAN!! Data tidak dapat dikembalikan. Apakah yakin akan menghapus data ini?')">

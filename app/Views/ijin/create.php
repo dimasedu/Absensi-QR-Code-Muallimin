@@ -47,7 +47,7 @@ $siswalib = new Siswalib();
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= site_url('admin/absensi-ijin/save'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/absensi-ijin/save'); ?>" method="post" enctype="multipart/form-data" class="form-default">
               <?= csrf_field() ?>
 
               <?php $validation = \Config\Services::validation(); ?>
@@ -100,16 +100,17 @@ $siswalib = new Siswalib();
                 
               </div>
 
-              <div class="form-group mt-2">
+              <div class="form-group mt-4">
                 <label for="gambar">File Dokumen (Sertakan Jika Ada)</label>
+                <div class="input-group">
+                      <input type="file" id="filefoto" class="form-control" name="filefoto" placeholder="1234" accept=".jpg, .jpeg, .png, .webp" />
+                      <div class="invalid-feedback">
+                        <?= $validation->getError('filefoto'); ?>
+                      </div>
+                </div>
+                <small class="text-danger">File yang diizinkan JPG, JPEG, PNG, WEBP, PDF. Maksimal File : 2 MB</small><br>
+              
               </div>
-              <div class="input-group">
-                    <input type="file" id="filefoto" class="form-control" name="filefoto" placeholder="1234" accept=".jpg, .jpeg, .png, .webp" />
-                    <div class="invalid-feedback">
-                      <?= $validation->getError('filefoto'); ?>
-                    </div>
-              </div>
-              <small class="text-danger">File yang diizinkan JPG, JPEG, PNG, WEBP, PDF. Maksimal File : 2 MB</small><br>
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
           </div>

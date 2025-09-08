@@ -22,7 +22,7 @@
                      </div>
                   <?php endif; ?>
 
-                  <form action="<?= base_url('admin/guru/create'); ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?= base_url('admin/guru/create'); ?>" method="post" enctype="multipart/form-data" class="form-default">
                      <?= csrf_field() ?>
                      <?php $validation = \Config\Services::validation(); ?>
 
@@ -57,7 +57,7 @@
                         </div>
                      </div>
 
-                     <div class="form-group mt-2">
+                     <div class="form-group mt-4">
                         <label for="jk">Jenis Kelamin <span class="text-danger">*)</span></label>
                         <?php
                         if (old('jk')) {
@@ -65,15 +65,15 @@
                            $p = (old('jk') ?? $oldInput['jk'] ?? '') == '2' ? 'checked' : '';
                         }
                         ?>
-                        <div class="form-check form-control pt-0 mb-1 <?= $validation->getError('jk') ? 'is-invalid' : ''; ?>">
+                        <div class="form-check pt-0 mb-1 <?= $validation->getError('jk') ? 'is-invalid' : ''; ?>">
                            <div class="row">
                               <div class="col-auto">
                                  <div class="row">
                                     <div class="col-auto pr-1">
                                        <input class="form-check" type="radio" name="jk" id="laki" value="1" <?= $l ?? ''; ?> required>
                                     </div>
-                                    <div class="col">
-                                       <label class="form-check-label pl-0 pt-1" for="laki">
+                                    <div class="col pl-1">
+                                       <label class="form-check-label pl-0 pt-1 mb-0" for="laki">
                                           <h6 class="text-dark">Laki-laki</h5>
                                        </label>
                                     </div>
@@ -84,8 +84,8 @@
                                     <div class="col-auto pr-1">
                                        <input class="form-check" type="radio" name="jk" id="perempuan" value="2" <?= $p ?? ''; ?> required>
                                     </div>
-                                    <div class="col">
-                                       <label class="form-check-label pl-0 pt-1" for="perempuan">
+                                    <div class="col pl-1">
+                                       <label class="form-check-label pl-0 pt-1 mb-0" for="perempuan">
                                           <h6 class="text-dark">Perempuan</h6>
                                        </label>
                                     </div>
@@ -97,9 +97,6 @@
                            <?= $validation->getError('jk'); ?>
                         </div>
                      </div>
-
-                     
-
                      <div class="form-group mt-4">
                         <label for="alamat">Alamat <span class="text-danger">*)</span></label>
                         <input type="text" id="alamat" name="alamat" class="form-control" value="<?= old('alamat') ?? $oldInput['alamat'] ?? '' ?>" required>
@@ -137,19 +134,18 @@
                         </select>
                      </div>
 
-                     <div class="form-group mt-5">
+                     <div class="form-group mt-4">
                         <label for="foto">Foto <span class="text-danger"><?= $validation->getError('filefoto'); ?></span></label>
-                     </div>
-                     <div class="input-group">
+                           
+                        <div class="input-group">
                            <input type="file" id="fileefoto" class="form-control" name="filefoto" placeholder="1234" required accept=".jpg, .jpeg, .png" />
                         </div>
                         <small class="text-danger">File yang diijinkan JPG, JPEG, PNG</small>
+                     </div>
 
 
-                     <button type="submit" class="btn btn-success btn-block">Simpan</button>
+                     <button type="submit" class="btn btn-primary mt-4">Simpan</button>
                   </form>
-
-                  <hr>
                </div>
             </div>
          </div>

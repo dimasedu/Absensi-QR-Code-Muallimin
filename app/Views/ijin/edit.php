@@ -47,7 +47,7 @@ $siswalib = new Siswalib();
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= site_url('admin/absensi-ijin/update'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= site_url('admin/absensi-ijin/update'); ?>" method="post" enctype="multipart/form-data" class="form-default">
               <?= csrf_field() ?>
               <input type="hidden" name="id" value="<?=$query->id?>">
               <input type="hidden" name="filelama" value="<?=$query->file_ijin;?>">
@@ -128,37 +128,35 @@ $siswalib = new Siswalib();
                 
               </div>
 
-              <div class="form-group mt-2">
+              <div class="form-group mt-4">
                 <label for="gambar">File Dokumen (Sertakan Jika Ada)</label>
+                <div class="input-group">
+                      <input 
+                          type="file" 
+                          id="filefoto" 
+                          class="form-control" 
+                          name="filefoto" 
+                          placeholder="1234" 
+                          accept=".jpg, .jpeg, .png, .webp" 
+                      />
+                      <div class="invalid-feedback">
+                        <?= $validation->getError('filefoto'); ?>
+                      </div>
+                </div>
+                      <small class="text-danger">File yang diijinkan JPG, JPEG, PNG, WEBP, PDF. Maksimal File : 2 MB</small>   
               </div>
-              <div class="input-group">
-                    <input 
-                        type="file" 
-                        id="filefoto" 
-                        class="form-control" 
-                        name="filefoto" 
-                        placeholder="1234" 
-                        accept=".jpg, .jpeg, .png, .webp" 
-                    />
-                    <div class="invalid-feedback">
-                      <?= $validation->getError('filefoto'); ?>
-                    </div>
-              </div>
-              <br>
-                    <small class="text-danger">File yang diijinkan JPG, JPEG, PNG, WEBP, PDF. Maksimal File : 2 MB</small><br>
-                    <?php
-                    if($query->file_ijin != ""):
-                        ?>
-                        <a 
-                            href="<?=base_url('public/uploads/ijin/'.$query->file_ijin)?>" 
-                            class="btn btn-danger btn-sm" 
-                            target="_blank">
-                            Preview
-                        </a>
-                        <?php
-                    endif;
-                    ?>
-              <br><br>
+                   <?php
+                      if($query->file_ijin != ""):
+                          ?>
+                          <a 
+                              href="<?=base_url('public/uploads/ijin/'.$query->file_ijin)?>" 
+                              class="my-3 btn btn-danger btn-sm" 
+                              target="_blank">
+                              Preview
+                          </a>
+                          <?php
+                      endif;
+                      ?>
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
             </form>
           </div>

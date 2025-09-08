@@ -17,13 +17,21 @@
             <div class="card">
                <div class="card-header card-header-tabs card-header-success">
                   <div class="nav-tabs-navigation">
-                     <div class="row">
+                     <div class="row align-items-center">
                         <div class="col">
                            <h4 class="card-title"><b>Daftar Broadcast WA</b></h4>
                            <p class="card-category">Daftar pesan broadcast</p>
                         </div>
                         <div class="col-auto">
-                           <div class="nav-tabs-wrapper">
+                           <a class="btn btn-primary" id="tabBtn"  href="<?= base_url('admin/broadcast/add'); ?>">
+                              <i class="material-icons">add</i> Buat Baru
+                              <div class="ripple-container"></div>
+                           </a>
+                           <a class="btn btn-info ml-md-3 mt-3 mt-md-0" id="refreshBtn" href="<?=site_url('admin/broadcast')?>" data-toggle="tab">
+                              <i class="material-icons">refresh</i> Refresh
+                              <div class="ripple-container"></div>
+                           </a>
+                           <!-- <div class="nav-tabs-wrapper">
                               <ul class="nav nav-tabs" data-tabs="tabs">
                                  <li class="nav-item">
                                     <a class="nav-link" id="tabBtn"  href="<?= base_url('admin/broadcast/add'); ?>">
@@ -38,7 +46,7 @@
                                     </a>
                                  </li>
                               </ul>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
@@ -82,7 +90,7 @@
                                 <td>
                                     <div class="d-flex justify-content-center">
 
-                                        <a title="detail" href="<?= base_url('admin/broadcast/detail/' . $value['bc_id']); ?>" class="btn btn-info p-2" id="<?= $value['bc_id']; ?>" >
+                                        <a title="detail" href="<?= base_url('admin/broadcast/detail/' . $value['bc_id']); ?>" class="btn btn-edit p-2" id="<?= $value['bc_id']; ?>" >
                                         <i class="material-icons">pageview</i>
                                         </a>
                                         <a title="Edit" href="<?= base_url('admin/broadcast/delete/' . $value['bc_id']); ?>" class="btn btn-danger p-2" id="<?= $value['bc_id']; ?>" onclick="return confirm('Konfirmasi untuk menghapus data');" >

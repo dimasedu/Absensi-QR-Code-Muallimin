@@ -14,7 +14,7 @@
                   <div class="col-auto pr-1 pt-1">
                      <input class="form-check" type="radio" name="id_kehadiran" id="k<?= $kehadiran['text']; ?>" value="<?= $value2['id_kehadiran']; ?>" <?= $value2['id_kehadiran'] == ($presensi['id_kehadiran'] ?? '4') ? 'checked' : ''; ?>>
                   </div>
-                  <div class="col">
+                  <div class="col pl-1">
                      <label class="form-check-label pl-0" for="k<?= $kehadiran['text']; ?>">
                         <h6 class="text-<?= $kehadiran['color']; ?>"><?= $kehadiran['text']; ?></h6>
                      </label>

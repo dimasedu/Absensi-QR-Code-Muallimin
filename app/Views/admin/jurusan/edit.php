@@ -10,7 +10,7 @@
           </div>
           <div class="card-body mx-5 my-3">
 
-            <form action="<?= base_url('admin/jurusan/' . $data['id']); ?>" method="post">
+            <form action="<?= base_url('admin/jurusan/' . $data['id']); ?>" method="post" class="form-default">
               <input type="hidden" name="_method" value="PATCH">
               <?= csrf_field() ?>
               <?php $validation = \Config\Services::validation(); ?>
@@ -26,7 +26,7 @@
                 </div>
               <?php endif; ?>
 
-              <div class="form-group mt-4">
+              <div class="form-group mt-0">
                 <label for="jurusan">Nama jurusan</label>
                 <input type="text" id="jurusan" class="form-control <?= $validation->getError('jurusan') ? 'is-invalid' : ''; ?>" name="jurusan" placeholder="'X', 'XI', '11'" value="<?= old('jurusan') ?? $oldInput['jurusan'] ?? $data['jurusan'] ?>">
                 <div class="invalid-feedback">

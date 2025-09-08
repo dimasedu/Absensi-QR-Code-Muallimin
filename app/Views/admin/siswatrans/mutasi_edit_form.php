@@ -11,7 +11,7 @@
                </div>
                <div class="card-body mx-5 my-3">
 
-                  <form action="<?= base_url('admin/mutasi-edit-proses'); ?>" method="post" enctype="multipart/form-data">
+                  <form action="<?= base_url('admin/mutasi-edit-proses'); ?>" method="post" enctype="multipart/form-data" class="form-default">
                      <?= csrf_field() ?>
                      <input type="hidden" name="id" value="<?=$query->id?>">
                      <?php $validation = \Config\Services::validation(); ?>
@@ -28,7 +28,7 @@
                      <?php endif; ?>
 
 
-                     <div class="form-group mt-4">
+                     <div class="form-group mt-0">
                         <label for="nis">NIS</label>
                         <input type="text" id="nis" class="form-control" name="nis" value="<?=$query->nis;?>">
                         
@@ -40,8 +40,8 @@
                         
                      </div>
                      
-                     <div class="row">
-                        <div class="col-md-4">
+                     <div class="row mt-4">
+                        <div class="col-md-4 form-group mt-0">
                            <label for="kelas">Kelas <span class="text-danger">*)</span></label>
                            <select class="custom-select" id="kelas" name="kelas" required>
                               <option value="">--Pilih kelas--</option>
@@ -54,7 +54,7 @@
                            </select>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 form-group mt-0">
                             <label for="tipe">Tipe  <span class="text-danger">*)</span></label>
                             <select class="custom-select" id="tipe" name="tipe" required>
                                 <option value="">--Pilih Tipe Mutasi--</option>
@@ -64,30 +64,27 @@
                             </select>
                         </div>    
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 form-group mt-0">
                                 <label for="thajar">Tahun Ajar <span class="text-danger">*)</span></label>
                                 <div class="row">
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-4">
                                         <input type="number" class="form-control" name="thawal" value="<?=$thawal;?>" min="<?$thawal;?>">
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-4">
                                         <input type="number" class="form-control" name="thakhir" value="<?=$thakhir;?>" min="<?$thakhir;?>">
                                     </div>
                                 </div>
                         </div>
                     </div>    
-                                <br><br>
-                    <div class="form-group">
+                    <div class="form-group mt-4">
                         <label for="keterangan">Keterangan</label>
                         <textarea name="keteranga" id="keterangan" class="form-control" placeholder="Masukkan Keterangan (Opsional)"><?=$query->keterangan;?></textarea>
                         
                      </div>
                      
                         
-                     <button type="submit" class="btn btn-primary btn-block mt-5">Simpan</button>
+                     <button type="submit" class="btn btn-primary mt-4">Simpan</button>
                   </form>
-
-                  <hr>
                </div>
             </div>
          </div>

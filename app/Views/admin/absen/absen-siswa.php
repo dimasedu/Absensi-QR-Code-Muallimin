@@ -5,18 +5,21 @@
       <div class="row">
          <div class="col-lg-12 col-md-12">
             <div class="card">
+               <div class="card-header d-flex flex-wrap justify-content-between align-items-center">
+                  <h4 class="card-title"><b>Daftar Kelas</b> </h4>
+                  <div>
+                  <a class="btn btn-info" href="<?= base_url('admin/absensi-izin'); ?>">
+                     <i class="material-icons mr-2">inventory</i> TAMBAH IZIN / SAKIT
+                  </a>
+                  <a class="btn btn-danger" href="<?= base_url('admin/absensi-siswa-reset'); ?>">
+                     <i class="material-icons mr-2">refresh</i> RESET ABSENSI
+                  </a>
+                  </div>
+               </div>
                <div class="card-body">
                   <div class="row justify-content-between">
                      <div class="col">
                         <div class="pt-3 pl-3">
-                           <h4><b>Daftar Kelas</b>  
-                           <a class="btn btn-info" href="<?= base_url('admin/absensi-izin'); ?>">
-                              <i class="material-icons mr-2">inventory</i> TAMBAH IZIN / SAKIT
-                           </a>
-                           <a class="btn btn-danger" href="<?= base_url('admin/absensi-siswa-reset'); ?>">
-                              <i class="material-icons mr-2">refresh</i> RESET ABSENSI
-                           </a>
-
                            <!-- <button type="button" class="btn bg-success" data-bs-toggle="modal" data-bs-target="#laporanModal">
                               <i class="material-icons mr-2">forum</i>LAPORAN IJIN/SAKIT
                            </button> -->
@@ -55,20 +58,21 @@
                            </div>
                            </div>
                            </h4>
-                           <p>Silakan pilih kelas</p>
+                           <!-- <p>Silakan pilih kelas</p> -->
                         </div>
                      </div>
                   </div>
 
-                  <div class="card-body pt-1 px-3">
+                  <div class="">
                   <div class="row">
                      <div class="col-md-3">
-                        <div class="pt-3 pl-3 pb-2">
+                        <div class="">
                            <h4><b>Pilih Tanggal</b></h4>
                            <input class="form-control" type="date" name="tanggal" id="tanggal" value="" onchange="onDateChange()">
                         </div>
                      </div>
                   </div>
+                     <h4 class="mt-4"><b>Silakan pilih kelas</b></h4>
                      <div class="row">
                         <?php foreach ($kelas as $value) : ?>
                            <?php
